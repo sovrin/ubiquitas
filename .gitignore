@@ -1,0 +1,7 @@
+linux/target/
+.build/
+linux/dist/
+*.zip
+macos/ubiquitas.app/
+xcuserdata/
+.DS_Store

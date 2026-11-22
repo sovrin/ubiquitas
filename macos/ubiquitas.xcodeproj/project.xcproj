@@ -1,0 +1,103 @@
+{
+  "default-configuration": "Release",
+  "configurations": [
+    "Debug",
+    "Release",
+  ],
+  "localizations": {
+    "development": "en",
+    "supported": [
+      "Base",
+    ],
+  },
+  "packages": [
+    {
+      "kind": "remote",
+      "repository": "https://github.com/sovrin/paritas",
+      "version": {
+        "up-to-next-major-version": "0.1.0",
+      },
+    },
+  ],
+  "files": [
+    { "kind": "folder", "path": "ubiquitas", "target-membership": [ "ubiquitas" ] },
+    {
+      "kind": "group",
+      "name": "Products",
+      "children": [
+        { "path": "<PRODUCTS>/ubiquitas.app", "id": "5B1C2A0130B0A10000E1C001", "type": "wrapper.application", "index": false },
+      ],
+    },
+  ],
+  "targets": [
+    {
+      "name": "ubiquitas",
+      "id": "5B1C2A0030B0A10000E1C001",
+      "product": "Products/ubiquitas.app",
+      "product-type": "application",
+      "build-phases": [
+        "compile-sources",
+        "frameworks",
+        "resources",
+      ],
+      "package-product-members": [
+        {
+          "product-name": "Paritas",
+          "build-phase": { "build-phase": "frameworks" },
+        },
+      ],
+      "build-settings": {
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
+        "CODE_SIGN_STYLE": "Automatic",
+        "COMBINE_HIDPI_IMAGES": "YES",
+        "CURRENT_PROJECT_VERSION": "1",
+        "DEVELOPMENT_TEAM": "Z48D4BC62Y",
+        "ENABLE_APP_SANDBOX": "NO",
+        "ENABLE_HARDENED_RUNTIME": "YES",
+        "ENABLE_PREVIEWS": "YES",
+        "GENERATE_INFOPLIST_FILE": "YES",
+        "INFOPLIST_KEY_CFBundleDisplayName": "ubiquitas",
+        "INFOPLIST_KEY_LSApplicationCategoryType": "public.app-category.utilities",
+        "INFOPLIST_KEY_LSUIElement": "YES",
+        "INFOPLIST_KEY_NSHumanReadableCopyright": "",
+        "INFOPLIST_KEY_NSLocalNetworkUsageDescription": "ubiquitas accepts connections from your other computers to share this Mac's keyboard and mouse.",
+        "LD_RUNPATH_SEARCH_PATHS": [
+          "$(inherited)",
+          "@executable_path/../Frameworks",
+        ],
+        "MARKETING_VERSION": "0.3.0",
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.sovrin.ubiquitas",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "SWIFT_EMIT_LOC_STRINGS": "YES",
+        "SWIFT_VERSION": "5.0",
+      },
+    },
+  ],
+  "build-settings": {
+    "ALWAYS_SEARCH_USER_PATHS": "NO",
+    "ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS": "YES",
+    "CLANG_ENABLE_MODULES": "YES",
+    "CLANG_ENABLE_OBJC_ARC": "YES",
+    "COPY_PHASE_STRIP": "NO",
+    "DEBUG_INFORMATION_FORMAT[config=Debug]": "dwarf",
+    "DEBUG_INFORMATION_FORMAT[config=Release]": "dwarf-with-dsym",
+    "DEVELOPMENT_TEAM": "Z48D4BC62Y",
+    "ENABLE_NS_ASSERTIONS[config=Release]": "NO",
+    "ENABLE_STRICT_OBJC_MSGSEND": "YES",
+    "ENABLE_TESTABILITY[config=Debug]": "YES",
+    "ENABLE_USER_SCRIPT_SANDBOXING": "YES",
+    "GCC_PREPROCESSOR_DEFINITIONS[config=Debug]": [
+      "DEBUG=1",
+      "$(inherited)",
+    ],
+    "LOCALIZATION_PREFERS_STRING_CATALOGS": "YES",
+    "MACOSX_DEPLOYMENT_TARGET": "26.6",
+    "ONLY_ACTIVE_ARCH[config=Debug]": "YES",
+    "SDKROOT": "macosx",
+    "SWIFT_ACTIVE_COMPILATION_CONDITIONS[config=Debug]": "DEBUG $(inherited)",
+    "SWIFT_COMPILATION_MODE[config=Release]": "wholemodule",
+    "SWIFT_OPTIMIZATION_LEVEL[config=Debug]": "-Onone",
+  },
+  "last-upgrade": "27.2",
+  "last-swift-update": "27.2",
+}
