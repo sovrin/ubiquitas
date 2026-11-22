@@ -2,6 +2,8 @@
 
 One keyboard and mouse, every computer. A very small software KVM.
 
+<img src="docs/menubar.png" width="438" alt="ubiquitas menu bar panel: three screens arranged side by side with input on bazzite, keyboard and mouse sharing on, shared text and a received file">
+
 - `macos/`: server, Swift/SwiftUI. Captures this Mac's keyboard and mouse.
 - `linux/`: client, Rust/GTK4. Replays input through virtual `uinput` devices, so it works on X11 and Wayland (Bazzite, Fedora, Ubuntu).
 - Windows client: planned, same protocol.
